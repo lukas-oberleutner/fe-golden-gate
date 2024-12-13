@@ -1,4 +1,4 @@
-# FE Etnetera
+# FE Golden Gate
 
 This template should help get you started developing in Vite.
 
