@@ -1,0 +1,12 @@
+/* Utilities */
+@layer utilities {
+    .u-focus {
+        @apply focus:outline-none focus:ring-2 focus:ring-primary
+    }
+    .u-line {
+        @apply border-b border-neutral-4
+    }
+    .u-background {
+        @apply bg-gradient-to-b from-background-1 to-background-2
+    }
+}

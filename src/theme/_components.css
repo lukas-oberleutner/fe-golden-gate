@@ -1,0 +1,402 @@
+/* Components */
+@layer components {
+
+    /* Button */
+    .c-button {
+        @apply flex justify-between items-center font-bold bg-white whitespace-nowrap rounded-sm
+    }
+    .c-button--primary {
+        @apply text-white bg-primary
+    }
+    .c-button--secondary {
+        @apply text-primary border border-primary
+    }
+    .c-button--ghost {
+        @apply bg-transparent
+    }
+    .c-button--sm {
+        @apply p-2 gap-2
+    }
+    .c-button--md {
+        @apply p-3 gap-3
+    }
+
+    /* Input */
+    .c-input {
+        @apply w-full px-4 py-2 border border-neutral-4 bg-white rounded-sm
+    }
+
+    /* Select */
+    .c-select {
+        @apply w-full px-4 py-2 font-bold border border-neutral-4 bg-white rounded-sm
+    }
+
+    /*-- Badge -*/
+    .c-badge {
+        @apply px-4 py-1 text-txt bg-neutral-1 rounded-sm
+    }
+
+    /* Icon */
+    .c-icon {
+        @apply flex
+    }
+    .c-icon--xs {
+        @apply size-2
+    }
+    .c-icon--sm {
+        @apply size-4
+    }
+    .c-icon--md {
+        @apply size-5
+    }
+    .c-icon--lg {
+        @apply size-6
+    }
+    .c-icon--xl {
+        @apply size-14
+    }
+    .c-icon--arrow {
+        @apply size-2
+    }
+    .c-icon--dots {
+        @apply w-2 h-2 mt-auto items-end
+    }
+
+    /* Slider */
+    .c-slider {
+        @apply w-full max-w-md mx-auto mt-10
+    }
+
+    /* Logo */
+    .c-logo {
+        @apply flex
+    }
+
+    /* Adviser */
+    .c-adviser {
+        @apply flex gap-2 items-center
+    }
+    .c-adviser__img {
+        @apply w-8 h-8 flex-shrink-0 border border-neutral-5 rounded-full
+    }
+    .c-adviser__contact {
+        @apply flex flex-col
+    }
+    .c-adviser__link {
+        @apply font-bold text-txt
+    }
+
+    /* Basket */
+    .c-basket__link {
+        @apply p-2 flex gap-2 text-tertiary relative
+    }
+    .c-basket__count {
+        @apply absolute bottom-2 left-6 flex justify-center items-center w-3 h-3 bg-tertiary text-2xs text-white rounded-full
+    }
+    .c-basket__price {
+        @apply text-tertiary font-bold
+    }
+
+    /* Notification */
+    .c-notification__link {
+        @apply p-2 flex gap-1 text-txt
+    }
+
+    /* User */
+    .c-user__link {
+        @apply p-2 flex gap-1 items-center text-txt
+    }
+
+    /* Navigation */
+    .c-nav {
+        @apply flex flex-col gap-4 fixed inset-0 z-10 bg-white top-[104px] w-full max-h-lvh p-5
+        lg:static lg:flex-row lg:h-auto lg:bg-neutral-2 lg:p-0
+    }
+    .c-nav__list {
+        @apply flex flex-col gap-1
+        lg:flex-row
+    }
+    .c-nav__list--secondary {
+        @apply flex-1
+        lg:justify-end
+    }
+    .c-nav__link {
+        @apply flex items-center p-4 text-txt bg-neutral-4 font-medium whitespace-nowrap rounded-t-sm
+        lg:justify-center
+    }
+    .c-nav__list--secondary .c-nav__link {
+        @apply flex p-3 bg-neutral-3 font-medium rounded-sm
+    }
+    .c-nav__link--icon {
+        @apply flex gap-1
+    }
+
+    /* Breadcrumbs */
+    .c-breadcrumbs {
+        @apply flex
+    }
+    .c-breadcrumbs__link {
+        @apply mr-auto flex gap-2 items-center underline decoration-1 font-semibold
+    }
+
+    /* Categories */
+    .c-categories {
+        @apply flex flex-col
+    }
+    .c-categories__item a {
+        @apply flex mb-px px-2.5 py-1.5 text-txt font-semibold rounded
+        hover:font-bold hover:bg-neutral-4
+    }
+    .c-categories__sublist {
+        @apply ml-2.5 bg-neutral-1 rounded
+    }
+    .c-categories__sublist .c-categories__item a {
+        @apply py-1
+    }
+
+    .c-categories__item--active > a {
+        @apply font-bold bg-neutral-4
+    }
+
+    /* Filter */
+    .c-filter {
+        @apply flex flex-col gap-7
+    }
+    .c-filter__item {
+        @apply flex flex-col gap-3.5
+    }
+    .c-filter__link {
+        @apply flex justify-between items-center px-2.5 py-1.5 text-txt font-semibold border-t  border-neutral-4 rounded
+    }
+    .c-filter__link--open {
+        @apply font-bold bg-neutral-1 border-none
+    }
+    .c-filter__list {
+        @apply flex flex-col gap-2 mb-6
+    }
+    .c-filter__list-item {
+        @apply flex items-center
+    }
+    .c-filter__checkbox {
+        @apply w-5 h-5 mr-2 rounded border border-txt
+    }
+    .c-filter__label {
+        @apply font-semibold text-secondary underline decoration-1 cursor-pointer
+    }
+    .c-filter__count {
+        @apply ml-1 text-neutral-5 font-semibold
+    }
+
+    /* Category details */
+    .c-category-details {
+        @apply flex flex-row gap-5
+    }
+    .c-category-details__content {
+        @apply flex flex-col gap-5
+    }
+
+    /* Content categories */
+    .c-content-categories__list {
+        @apply flex flex-wrap gap-2.5
+    }
+    .c-content-categories__link {
+        @apply flex pr-4 gap-4 border border-neutral-4 items-center text-txt font-semibold rounded-sm
+        lg:min-w-48
+        hover:text-primary hover:outline hover:outline-2 hover:outline-primary hover:border-primary
+    }
+    .c-content-categories__img {
+        @apply size-12
+    }
+    .c-content-categories__link--active {
+        @apply outline outline-2 outline-primary border-primary
+    }
+
+    /* Search */
+    .c-search {
+        @apply flex flex-col gap-1 text-txt
+    }
+    .c-search__content {
+        @apply flex justify-between border border-neutral-4
+        xl:w-80
+    }
+    .c-search__input {
+        @apply border-none
+    }
+    .c-search__button {
+        @apply text-neutral-5 rounded-sm
+    }
+
+    /* Content filter */
+    .c-content-filter__list {
+        @apply flex gap-6
+    }
+    .c-content-filter__link {
+        @apply pb-3 flex pt-2 py-1 text-txt font-semibold
+        hover:text-primary hover:font-bold
+    }
+    .c-content-filter__link--active {
+        @apply text-primary font-bold border-b-2 border-primary
+    }
+
+    /* Content switcher */
+    .c-content-switcher__list {
+        @apply flex gap-2
+    }
+    .c-content-switcher__link {
+        @apply px-2 py-1 flex gap-2 items-center text-txt-unavailable rounded-sm
+        lg:mb-2
+    }
+    .c-content-switcher__link--active {
+        @apply text-txt bg-neutral-1
+    }
+    .c-content-switcher__label {
+        @apply hidden
+        sm:hidden
+        md:inline
+        lg:hidden
+        xl:inline
+    }
+
+    /* Item count */
+    .c-product-count {
+        @apply text-right
+    }
+
+    /* Products */
+    .c-products {
+        @apply grid grid-cols-1 gap-5
+        sm:grid-cols-2
+        lg:grid-cols-2
+        xl:grid-cols-3
+        2xl:grid-cols-4
+    }
+
+    /* Product */
+    .c-product {
+        @apply h-full p-4 flex flex-col gap-4 justify-center text-txt border border-neutral-4 rounded-sm relative
+        hover:outline hover:outline-2 hover:outline-primary hover:border-primary
+    }
+    .c-product__badge {
+        @apply absolute top-px left-px rounded-none rounded-br-sm
+    }
+    .c-product__img {
+        @apply mx-auto
+    }
+    .c-product__name {
+        @apply pb-4 text-xl
+    }
+    .c-product__name a {
+        @apply text-txt
+        hover:text-primary
+    }
+    .c-product__purchase {
+        @apply pb-4 flex justify-between u-line
+    }
+    .c-product__summary {
+        @apply flex flex-col gap-2
+    }
+    .c-product__price {
+        @apply text-1xl font-bold
+    }
+    .c-product__stock {
+        @apply flex gap-2 items-center font-bold
+    }
+    .c-product__stock--in-stock {
+        @apply text-success
+    }
+    .c-product__stock--unavailable  {
+        @apply text-txt-unavailable
+    }
+    .c-product__button {
+        @apply my-auto ml-auto
+    }
+    .c-product__description {
+        @apply text-md
+    }
+
+    /* Paging */
+    .c-paging {
+        @apply flex flex-col gap-4 justify-between relative
+        sm:flex-row
+    }
+    .c-paging__button {
+        @apply md:mx-auto
+    }
+    .c-paging__list {
+        @apply flex items-center text-txt
+        md:absolute md:right-0 md:bottom-0
+    }
+    .c-paging__item {
+        @apply p-2 font-semibold
+    }
+    .c-paging__link {
+        @apply flex gap-2 items-center underline decoration-1
+    }
+    .c-paging__link--active {
+        @apply flex p-2
+    }
+
+    /* FAQ */
+    .c-faq {
+        @apply p-5 bg-white
+    }
+    .c-faq__link {
+        @apply flex gap-2 justify-between items-center px-2.5 py-2 text-txt rounded
+        hover:bg-neutral-1
+    }
+    .c-faq__link--next {
+        @apply justify-center mx-auto text-primary text-center font-semibold underline decoration-1
+        hover:bg-transparent
+    }
+
+    /* Footer adviser */
+    .c-footer-adviser {
+        @apply my-auto p-5 flex flex-col gap-5 justify-center
+        md:flex-row
+    }
+    .c-footer-adviser__img {
+        @apply w-24 h-24 flex-shrink-0 border border-neutral-5 rounded-full
+    }
+    .c-footer-adviser__contact {
+        @apply flex flex-col gap-2
+    }
+    .c-footer-adviser__name {
+        @apply text-xl
+    }
+    .c-footer-adviser__link {
+        @apply font-semibold underline decoration-1
+    }
+    .c-footer-adviser__button {
+        @apply mt-2 mr-auto
+    }
+
+    /* Apps */
+    .c-apps {
+        @apply flex gap-4 justify-center items-center
+    }
+
+    /* Copyright */
+    .c-copyright {
+        @apply flex justify-center items-center
+    }
+    .c-copyright a {
+        @apply underline decoration-1
+    }
+
+    /* Footer */
+    .c-footer {
+        @apply py-10 bg-neutral-3 text-md bg-no-repeat bg-right-top bg-[url('/fe-golden-gate/src/assets/bg-footer.svg')]
+    }
+    .c-footer__content {
+        @apply w-full flex flex-col bg-white
+    }
+    .c-footer__content h3 {
+        @apply text-xl
+    }
+    .c-footer__title {
+        @apply min-h-16 p-4 u-line
+    }
+    .c-footer__select {
+        @apply p-1 sm:max-w-40
+    }
+}

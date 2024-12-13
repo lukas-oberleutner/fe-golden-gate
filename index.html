@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Shop Golden Gate - Slitky" />
+    <title>FE Golden Gate</title>
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- Header -->
+      <header class="bg-neutral-2 u-line fixed top-0 left-0 w-full z-10 lg:static">
+        <div class="container mx-auto flex flex-col px-5 max-w-screen-2xl">
+          <div class="flex gap-8 py-8 items-center justify-between">
+
+            <!-- Logo -->
+            <div class="c-logo">
+              <a href="#">
+                <img src="/src/assets/images/logo-golden-gate.svg" width="212px" height="45"  alt="Logo společnosti Golden Gate" loading="lazy">
+              </a>
+            </div>
+
+            <div class="flex gap-3 lg:gap-7 items-center justify-between">
+
+              <!-- Adviser -->
+              <div class="c-adviser hidden lg:flex">
+                <img class="c-adviser__img" src="/src/assets/images/advisers/adviser-1-sm.jpg" alt="" loading="lazy">
+                <div class="c-adviser__contact">
+                  <span id="aria-adviser-contact">Kontakt na poradce</span>
+                  <a class="c-adviser__link" href="tel:+420603741532" aria-labelledby="aria-adviser-contact">+420 603 741 532</a>
+                </div>
+              </div>
+
+              <!-- Basket -->
+              <div class="c-basket">
+                <a class="c-basket__link" href="#" aria-labelledby="aria-basket">
+                  <span class="sr-only" id="aria-basket">Košík</span>
+                  <span class="c-icon c-icon--lg" data-icon="basket"></span>
+                  <span class="c-basket__count">1</span>
+                  <span class="c-basket__price hidden lg:inline">45 444 Kč</span>
+                </a>
+              </div>
+
+              <!-- Notifications -->
+              <div class="c-notification">
+                <a class="c-notification__link" href="#" aria-labelledby="aria-notification">
+                  <span class="c-icon c-icon--lg" data-icon="notification"></span>
+                  <span class="hidden lg:inline" id="aria-notification">Zprávy</span>
+                </a>
+              </div>
+
+              <!-- User -->
+              <div class="c-user">
+                <a class="c-user__link" href="#" aria-labelledby="aria-user">
+                  <span class="c-icon c-icon--lg" data-icon="user"></span>
+                  <span class="hidden lg:inline" id="aria-user"><span class="sr-only">Profil</span> Tomáš Novák</span>
+                  <span class="c-icon c-icon--arrow hidden lg:flex" data-icon="arrow-down"></span>
+                </a>
+              </div>
+
+              <!-- Mobile navigation -->
+              <button class="c-button c-button--sm c-button--ghost lg:hidden c-nav-button" data-toggle data-target=".c-nav" aria-label="Otevřít navigační menu">
+                <span class="c-icon c-icon--lg" data-icon="menu"></span>
+                <span class="c-icon c-icon--lg hidden" data-icon="close"></span>
+              </button>
+            </div>
+          </div>
+        
+          <!-- Navigation --->
+          <nav class="c-nav hidden lg:flex">
+            <ul class="c-nav__list">
+              <li>
+                <a class="c-nav__link c-nav__link--icon" href="#">
+                  <span class="c-icon c-icon--md" data-icon="squares"></span>
+                  Přehled
+                </a>
+              </li>
+              <li>
+                <a class="c-nav__link c-nav__link--icon" href="#">
+                  <span class="c-icon c-icon--md" data-icon="metal"></span>
+                  Drahé kovy
+                </a>
+              </li>
+              <li>
+                <a class="c-nav__link c-nav__link--icon" href="#">
+                  <span class="c-icon c-icon--md" data-icon="crypto"></span>
+                  Kryptoměny
+                </a>
+              </li>
+              <li>
+                <a class="c-nav__link c-nav__link--icon" href="#">
+                  <span class="c-icon c-icon--md" data-icon="chart"></span>
+                  Fondy
+                </a>
+              </li>
+            </ul>
+            <ul class="c-nav__list">
+              <li>
+                <a class="c-nav__link" href="">Transakce</a>
+              </li>
+              <li>
+                <a class="c-nav__link" href="">Vzdělávání a aktivity</a>
+              </li>
+              <li>
+                <a class="c-nav__link" href="">Sledování cen</a>
+              </li>
+            </ul>
+            <ul class="c-nav__list c-nav__list--secondary">
+              <li>
+                <a class="c-nav__link c-nav__link--icon" href="#">
+                  <span class="c-icon c-icon--md" data-icon="help"></span>
+                  <span class="lg:hidden xl:inline">Nápověda</span>
+                </a>
+              </li>
+              <li>
+                <a class="c-nav__link c-nav__link--icon" href="#">
+                  <span class="c-icon c-icon--md" data-icon="phone"></span>
+                  <span class="lg:hidden xl:inline">Kontakt</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main class="mt-[104px] lg:mt-0">
+        <div class="container mx-auto flex flex-col gap-4 pt-8 px-5">
+
+          <!-- Breadcrumbs -->
+          <div class="c-breadcrumbs">
+            <a class="c-breadcrumbs__link" href="#">
+              <span class="c-icon c-icon--arrow" data-icon="arrow-left"></span>
+              Zpět na drahé kovy
+            </a>
+          </div>
+
+          <!-- Page layout-->
+          <div class="flex flex-col-reverse lg:flex-row-reverse gap-8 mb-8">
+
+            <!-- Content -->
+            <div class="flex flex-col">
+              <div class="c-category-details mb-8">
+                <div class="c-category-details__content">
+                  <h1 class="c-category-details__name">Slitky</h1>
+                  <p class="c-category-details__description">A gold bar is a solid piece of pure gold that is cast in a rectangular or other shape and is used primarily as a form of investment. Gold bars come in a variety of sizes, with the most common sizes being 1 ounce, 10 ounces, and 1 kilogram. They are made by melting high-purity gold bullion and casting it into molds. Gold has been a symbol of wealth and prosperity for centuries, and owning gold bars is still a popular way to invest in this precious metal.</p>
+                </div>
+                <img class="c-category-details__img hidden lg:block" width="195px" height="218px" src="/src/assets/images/category/category-1.jpg" alt="Kategorie slitky" loading="lazy" decoding="async">
+              </div>
+              
+              <div class="flex flex-col flex-end xl:flex-row-reverse gap-5 justify-between mb-8">
+
+                <!-- Search -->
+                <div class="c-search">
+                  <label class="c-search__label" for="search">Vyhledávejte v eshopu:</label>
+                  <div class="c-search__content">
+                    <input class="c-input c-search__input" id="search" type="text" placeholder="Napište co hledáte">
+                    <button class="c-button c-button--md c-button--ghost c-search__button" aria-label="Najít hledaný výraz">
+                      <span class="c-icon c-icon--md" data-icon="search"></span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Content categories -->
+                <div class="c-content-categories mt-auto">
+                  <ul class="c-content-categories__list">
+                    <li>
+                      <a class="c-content-categories__link c-content-categories__link--active" href="#">
+                        <img class="c-content-categories__img" width="48px" height="48px" src="/src/assets/images/category/category-2-sm.jpg" alt="Kategorie zlaté slitky" loading="lazy" decoding="async">
+                        Zlaté slitky
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-content-categories__link" href="#">
+                        <img class="c-content-categories__img"  width="48px" height="48px" src="/src/assets/images/category/category-3-sm.jpg" alt="Kategorie stříbrné slitky" loading="lazy" decoding="async">
+                        Stříbrné slitky
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-content-categories__link" href="#">
+                        <img class="c-content-categories__img" width="48px" height="48px" src="/src/assets/images/category/category-4-sm.jpg" alt="Kategorie platinové slitky" loading="lazy" decoding="async">
+                        Platinové slitky
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex gap-5 justify-between items-center mb-2 lg:u-line">
+
+                <!-- Content filter -->
+                <div class="c-content-filter">
+                  <label id="aria-filter" class="sr-only">Filtrace výrobků</label>
+                  <select class="c-select lg:hidden" name="" id="" aria-labelledby="aria-filter">
+                    <option value="">Nejnovější</option>
+                    <option value="">Nejstarší</option>
+                    <option value="">Nejlevnejší</option>
+                    <option value="">Nejdražší</option>
+                    <option value="">Váha</option>
+                  </select>
+                  <ul class="c-content-filter__list hidden lg:flex">
+                    <li><a class="c-content-filter__link c-content-filter__link--active" href="#" aria-labelledby="aria-filter" role="button">Nejprodávanějsí</a></li>
+                    <li><a class="c-content-filter__link" href="#" aria-labelledby="aria-filter" role="button">Nejnovější</a></li>
+                    <li><a class="c-content-filter__link" href="#" aria-labelledby="aria-filter" role="button">Nejstarší</a></li>
+                    <li><a class="c-content-filter__link" href="#" aria-labelledby="aria-filter" role="button">Nejlevnejší</a></li>
+                    <li><a class="c-content-filter__link" href="#" aria-labelledby="aria-filter">Nejdražší</a></li>
+                    <li><a class="c-content-filter__link" href="#" aria-labelledby="aria-filter">Váha</a></li>
+                  </ul>
+                </div>
+
+                <!-- Content switcher -->
+                <div class="c-content-switcher">
+                  <ul class="c-content-switcher__list">
+                    <li>
+                      <a class="c-content-switcher__link c-content-switcher__link--active" href="#" aria-label="Dlaždicové zobrazení výrobků">
+                        <span class="c-icon c-icon--sm" data-icon="squares"></span>
+                        <span class="c-content-switcher__label">Dlaždice</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-content-switcher__link" href="#" aria-label="Řádkové zobrazení výrobků">
+                        <span class="c-icon c-icon--sm" data-icon="rows"></span>
+                        <span class="c-content-switcher__label">Řádky</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Item count -->
+              <div class="c-product-count mb-2">
+                <div>Zobrazuji 1-21 z 220</div>
+              </div>
+
+              <!-- Items-->
+              <div class="c-products mb-5">
+
+                <!-- Item -->
+                <article class="c-product">
+                  <div class="c-badge c-product__badge">Štítek</div>
+                  <a href="#">
+                    <img class="c-product__img" width="250" height="250" src="/src/assets/images/products/item-1.jpg" alt="Obrázek produktu Zlatý slitek 1 oz" loading="lazy" decoding="async">
+                  </a>
+                  <h2 class="c-product__name u-line" id="aria-product-name"><a href="#">Zlatý slitek 1 oz</a></h2>
+                  <div class="c-product__purchase">
+                    <div class="c-product__summary">
+                      <div class="c-product__price">47 550 Kč</div>
+                      <div class="c-product__stock c-product__stock--in-stock">
+                        <span class="c-icon c-icon--md" data-icon="in-store"></span>
+                        Skladem > 10
+                      </div>
+                    </div>
+                    <button class="c-button c-button--sm c-button--primary c-product__button">
+                      <span class="c-icon c-icon--md" data-icon="basket"></span>
+                      Přidat do košíku
+                    </button>
+                  </div>
+                  <p class="c-product__description">Švýcarský zlatý slitek z 24 karátového zlata, certifikovaný švýcarskou firmou Argor-Heraeus SA odpovídá londýnskému standardu Good Delivery a je akceptován na všech trzích. Doklady autenticity (logo rafinéra, unikátní</p>
+                  <span class="sr-only" id="aria-product-detail">Detail produktu</span>
+                </article>
+
+                <!-- Item -->
+                <article class="c-product">
+                  <div class="c-badge c-product__badge">Štítek</div>
+                  <a href="#">
+                    <img class="c-product__img" width="250" height="250" src="/src/assets/images/products/item-2.jpg" alt="Obrázek produktu Zlatý slitek 1 oz" loading="lazy" decoding="async">
+                  </a>
+                  <h2 class="c-product__name u-line" id="aria-product-name"><a href="#">Zlatý slitek 1 oz</a></h2>
+                  <div class="c-product__purchase">
+                    <div class="c-product__summary">
+                      <div class="c-product__price">47 550 Kč</div>
+                      <div class="c-product__stock c-product__stock--in-stock">
+                        <span class="c-icon c-icon--md" data-icon="in-store"></span>
+                        Skladem > 10
+                      </div>
+                    </div>
+                    <button class="c-button c-button--sm c-button--primary c-product__button">
+                      <span class="c-icon c-icon--md" data-icon="basket"></span>
+                      Přidat do košíku
+                    </button>
+                  </div>
+                  <p class="c-product__description">Švýcarský zlatý slitek z 24 karátového zlata, certifikovaný švýcarskou firmou Argor-Heraeus SA odpovídá londýnskému standardu Good Delivery a je akceptován na všech trzích. Doklady autenticity (logo rafinéra, unikátní</p>
+                  <span class="sr-only" id="aria-product-detail">Detail produktu</span>
+                </article>
+
+                <!-- Item -->
+                <article class="c-product">
+                  <div class="c-badge c-product__badge">Štítek</div>
+                  <a href="#">
+                    <img class="c-product__img" width="250" height="250" src="/src/assets/images/products/item-3.jpg" alt="Obrázek produktu Zlatý slitek 1 oz" loading="lazy" decoding="async">
+                  </a>
+                  <h2 class="c-product__name u-line" id="aria-product-name"><a href="#">Zlatý slitek 1 oz</a></h2>
+                  <div class="c-product__purchase">
+                    <div class="c-product__summary">
+                      <div class="c-product__price">47 550 Kč</div>
+                      <div class="c-product__stock c-product__stock--unavailable">
+                        <span class="c-icon c-icon--md" data-icon="unavailable"></span>
+                        Nedostupné
+                      </div>
+                    </div>
+                    <button class="c-button c-button--sm c-button--primary c-product__button">
+                      <span class="c-icon c-icon--md" data-icon="basket"></span>
+                      Přidat do košíku
+                    </button>
+                  </div>
+                  <p class="c-product__description">Švýcarský zlatý slitek z 24 karátového zlata, certifikovaný švýcarskou firmou Argor-Heraeus SA odpovídá londýnskému standardu Good Delivery a je akceptován na všech trzích. Doklady autenticity (logo rafinéra, unikátní</p>
+                  <span class="sr-only" id="aria-product-detail">Detail produktu</span>
+                </article>
+                <!-- Item -->
+                <article class="c-product">
+                  <div class="c-badge c-product__badge">
+                    Štítek
+                  </div>
+                  <a href="#">
+                    <img class="c-product__img" width="250" height="250" src="/src/assets/images/products/item-1.jpg" alt="Obrázek produktu Zlatý slitek 1 oz" loading="lazy" decoding="async">
+                  </a>
+                  <h2 class="c-product__name u-line" id="aria-product-name"><a href="#">Zlatý slitek 1 oz</a></h2>
+                  <div class="c-product__purchase">
+                    <div class="c-product__summary">
+                      <div class="c-product__price">47 550 Kč</div>
+                      <div class="c-product__stock c-product__stock--in-stock">
+                        <span class="c-icon c-icon--md" data-icon="in-store"></span>
+                        Skladem > 10
+                      </div>
+                    </div>
+                    <button class="c-button c-button--sm c-button--primary c-product__button">
+                      <span class="c-icon c-icon--md" data-icon="basket"></span>
+                      Přidat do košíku
+                    </button>
+                  </div>
+                  <p class="c-product__description">Švýcarský zlatý slitek z 24 karátového zlata, certifikovaný švýcarskou firmou Argor-Heraeus SA odpovídá londýnskému standardu Good Delivery a je akceptován na všech trzích. Doklady autenticity (logo rafinéra, unikátní</p>
+                  <span class="sr-only" id="aria-product-detail">Detail produktu</span>
+                </article>
+
+                <!-- Item -->
+                <article class="c-product">
+                  <div class="c-badge c-product__badge">Štítek</div>
+                  <a href="#">
+                    <img class="c-product__img" width="250" height="250" src="/src/assets/images/products/item-2.jpg" alt="Obrázek produktu Zlatý slitek 1 oz" loading="lazy" decoding="async">
+                  </a>
+                  <h2 class="c-product__name u-line" id="aria-product-name"><a href="#">Zlatý slitek 1 oz</a></h2>
+                  <div class="c-product__purchase">
+                    <div class="c-product__summary">
+                      <div class="c-product__price">47 550 Kč</div>
+                      <div class="c-product__stock c-product__stock--in-stock">
+                        <span class="c-icon c-icon--md" data-icon="in-store"></span>
+                        Skladem > 10
+                      </div>
+                    </div>
+                    <button class="c-button c-button--sm c-button--primary c-product__button">
+                      <span class="c-icon c-icon--md" data-icon="basket"></span>
+                      Přidat do košíku
+                    </button>
+                  </div>
+                  <p class="c-product__description">Švýcarský zlatý slitek z 24 karátového zlata, certifikovaný švýcarskou firmou Argor-Heraeus SA odpovídá londýnskému standardu Good Delivery a je akceptován na všech trzích. Doklady autenticity (logo rafinéra, unikátní</p>
+                  <span class="sr-only" id="aria-product-detail">Detail produktu</span>
+                </article>
+
+                <!-- Item -->
+                <article class="c-product">
+                  <div class="c-badge c-product__badge">Štítek</div>
+                  <a href="#">
+                    <img class="c-product__img" width="250" height="250" src="/src/assets/images/products/item-3.jpg" alt="Obrázek produktu Zlatý slitek 1 oz" loading="lazy" decoding="async">
+                  </a>
+                  <h2 class="c-product__name u-line" id="aria-product-name"><a href="#">Zlatý slitek 1 oz</a></h2>
+                  <div class="c-product__purchase">
+                    <div class="c-product__summary">
+                      <div class="c-product__price">47 550 Kč</div>
+                      <div class="c-product__stock c-product__stock--unavailable">
+                        <span class="c-icon c-icon--md" data-icon="unavailable"></span>
+                        Nedostupné
+                      </div>
+                    </div>
+                    <button class="c-button c-button--sm c-button--primary c-product__button">
+                      <span class="c-icon c-icon--md" data-icon="basket"></span>
+                      Přidat do košíku
+                    </button>
+                  </div>
+                  <p class="c-product__description">Švýcarský zlatý slitek z 24 karátového zlata, certifikovaný švýcarskou firmou Argor-Heraeus SA odpovídá londýnskému standardu Good Delivery a je akceptován na všech trzích. Doklady autenticity (logo rafinéra, unikátní</p>
+                  <span class="sr-only" id="aria-product-detail">Detail produktu</span>
+                </article>
+
+                <!-- Item -->
+                <article class="c-product">
+                  <div class="c-badge c-product__badge">Štítek</div>
+                  <a href="#">
+                    <img class="c-product__img" width="250" height="250" src="/src/assets/images/products/item-1.jpg" alt="Obrázek produktu Zlatý slitek 1 oz" loading="lazy" decoding="async">
+                  </a>
+                  <h2 class="c-product__name u-line" id="aria-product-name"><a href="#">Zlatý slitek 1 oz</a></h2>
+                  <div class="c-product__purchase">
+                    <div class="c-product__summary">
+                      <div class="c-product__price">47 550 Kč</div>
+                      <div class="c-product__stock c-product__stock--in-stock">
+                        <span class="c-icon c-icon--md" data-icon="in-store"></span>
+                        Skladem > 10
+                      </div>
+                    </div>
+                    <button class="c-button c-button--sm c-button--primary c-product__button">
+                      <span class="c-icon c-icon--md" data-icon="basket"></span>
+                      Přidat do košíku
+                    </button>
+                  </div>
+                  <p class="c-product__description">Švýcarský zlatý slitek z 24 karátového zlata, certifikovaný švýcarskou firmou Argor-Heraeus SA odpovídá londýnskému standardu Good Delivery a je akceptován na všech trzích. Doklady autenticity (logo rafinéra, unikátní</p>
+                  <span class="sr-only" id="aria-product-detail">Detail produktu</span>
+                </article>
+
+                <!-- Item -->
+                <article class="c-product">
+                  <div class="c-badge c-product__badge">Štítek</div>
+                  <a href="#">
+                    <img class="c-product__img" width="250" height="250" src="/src/assets/images/products/item-2.jpg" alt="Obrázek produktu Zlatý slitek 1 oz" loading="lazy" decoding="async">
+                  </a>
+                  <h2 class="c-product__name u-line" id="aria-product-name"><a href="#">Zlatý slitek 1 oz</a></h2>
+                  <div class="c-product__purchase">
+                    <div class="c-product__summary">
+                      <div class="c-product__price">47 550 Kč</div>
+                      <div class="c-product__stock c-product__stock--in-stock">
+                        <span class="c-icon c-icon--md" data-icon="in-store"></span>
+                        Skladem > 10
+                      </div>
+                    </div>
+                    <button class="c-button c-button--sm c-button--primary c-product__button">
+                      <span class="c-icon c-icon--md" data-icon="basket"></span>
+                      Přidat do košíku
+                    </button>
+                  </div>
+                  <p class="c-product__description">Švýcarský zlatý slitek z 24 karátového zlata, certifikovaný švýcarskou firmou Argor-Heraeus SA odpovídá londýnskému standardu Good Delivery a je akceptován na všech trzích. Doklady autenticity (logo rafinéra, unikátní</p>
+                  <span class="sr-only" id="aria-product-detail">Detail produktu</span>
+                </article>
+
+                <!-- Item -->
+                <article class="c-product">
+                  <div class="c-badge c-product__badge">Štítek</div>
+                  <a href="#">
+                    <img class="c-product__img" width="250" height="250" src="/src/assets/images/products/item-3.jpg" alt="Obrázek produktu Zlatý slitek 1 oz" loading="lazy" decoding="async">
+                  </a>
+                  <h2 class="c-product__name u-line" id="aria-product-name"><a href="#">Zlatý slitek 1 oz</a></h2>
+                  <div class="c-product__purchase">
+                    <div class="c-product__summary">
+                      <div class="c-product__price">47 550 Kč</div>
+                      <div class="c-product__stock c-product__stock--unavailable">
+                        <span class="c-icon c-icon--md" data-icon="unavailable"></span>
+                        Nedostupné
+                      </div>
+                    </div>
+                    <button class="c-button c-button--sm c-button--primary c-product__button">
+                      <span class="c-icon c-icon--md" data-icon="basket"></span>
+                      Přidat do košíku
+                    </button>
+                  </div>
+                  <p class="c-product__description">Švýcarský zlatý slitek z 24 karátového zlata, certifikovaný švýcarskou firmou Argor-Heraeus SA odpovídá londýnskému standardu Good Delivery a je akceptován na všech trzích. Doklady autenticity (logo rafinéra, unikátní</p>
+                  <span class="sr-only" id="aria-product-detail">Detail produktu</span>
+                </article>
+              </div>
+
+              <!-- Paging -->
+              <div class="c-paging">
+                <button class="c-button c-button--md c-button--secondary c-paging__button">
+                  Dalších 21 produktů
+                  <span class="c-icon c-icon--xs" data-icon="arrow-down"></span>
+                </button>
+
+                <ul class="c-paging__list">
+                  <li class="c-paging__item">1</li>
+                  <li class="c-paging__item"><a class="c-paging__link" href="#">2</a></li>
+                  <li class="c-paging__item"><a class="c-paging__link" href="#">3</a></li>
+                  <li class="c-paging__item"><a class="c-paging__link" href="#">4</a></li>
+                  <li class="c-paging__item"><a class="c-paging__link" href="#">5</a></li>
+                  <li class="c-paging__item">
+                    <span class="c-icon c-icon--dots" data-icon="dots"></span>
+                  </li>
+                  <li class="c-paging__item">
+                    <a class="c-paging__link" href="#">
+                      Další
+                      <span class="c-icon c-icon--arrow" data-icon="arrow-right"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Left column -->
+            <aside class="lg:w-48 flex-shrink-0 flex flex-col gap-4">
+              <h2>E-shop</h2>
+
+              <!-- Categories -->
+              <div class="c-categories">
+                <button class="c-button c-button--md c-button--primary c-categories__button lg:hidden" data-toggle data-target=".c-categories__list" aria-label="Otevřít kategorie">
+                  Kategorie
+                  <span class="c-icon c-icon--arrow" data-icon="arrow-down"></span>
+                </button>
+
+                <ul class="c-categories__list hidden lg:block">
+                  <li class="c-categories__item c-categories__item--active"><a href="">Slitky</a>
+                    <ul class="c-categories__sublist">
+                      <li class="c-categories__item"><a href="">Zlaté slitky</a></li>
+                      <li class="c-categories__item"><a href="">Stříbrné slitky</a></li>
+                      <li class="c-categories__item"><a href="">Platinové slitky</a></li>
+                    </ul>
+                  </li>
+                  <li class="c-categories__item"><a href="">Investiční mince</a></li>
+                  <li class="c-categories__item"><a href="">Moderní numismatika</a></li>
+                  <li class="c-categories__item"><a href="">Doplňky</a></li>
+                  <li class="c-categories__item"><a href="">Vánoce</a></li>
+                  <li class="c-categories__item"><a href="">Dárky</a></li>
+                  <li class="c-categories__item"><a href="">Moje zakoupené kovy</a></li>
+                  <li class="c-categories__item"><a href="">Další kategorie</a></li>
+                </ul>
+              </div>
+
+              <!-- Filter -->
+              <div class="c-filter">
+                <button class="c-button c-button--md c-button--secondary lg:hidden" data-toggle data-target=".c-filter__content" aria-label="Otevřít filtraci">
+                  Filter
+                  <span class="c-icon c-icon--arrow" data-icon="arrow-down"></span>
+                </button>
+
+                <div class="c-filter__content hidden lg:flex lg:flex-col">
+                  <div class="c-filter__item">
+                    <h3 class="c-filter__title">
+                      <a class="c-filter__link" href="#" data-toggle data-target="#tooggle-nazev-filtru" aria-label="Otevřít filtr název filtru">
+                        Název filtru
+                        <span class="c-icon c-icon--arrow hidden" data-icon="arrow-top"></span>
+                        <span class="c-icon c-icon--arrow " data-icon="arrow-down"></span>
+                      </a>
+                    </h3>
+                    <ul class="c-filter__list hidden" id="tooggle-nazev-filtru">
+                      <li class="c-filter__list-item">
+                        <input class="c-filter__checkbox" id="hf-1" type="checkbox">
+                        <label class="c-filter__label" for="hf-1">Hodnota filtru</label>
+                        <span class="c-filter__count">(154)</span>
+                      </li>
+                      <li class="c-filter__list-item">
+                        <input class="c-filter__checkbox" id="hf-2" type="checkbox">
+                        <label class="c-filter__label" for="hf-2">Hodnota filtru</label>
+                        <span class="c-filter__count">(154)</span>
+                      </li>
+                      <li class="c-filter__list-item">
+                        <input class="c-filter__checkbox" id="hf-3" type="checkbox">
+                        <label class="c-filter__label" for="hf-3">Hodnota filtru</label>
+                        <span class="c-filter__count">(154)</span>
+                      </li>
+                      <li class="c-filter__list-item">
+                        <input class="c-filter__checkbox" id="hf-4" type="checkbox">
+                        <label class="c-filter__label" for="hf-4">Hodnota filtru</label>
+                        <span class="c-filter__count">(154)</span>
+                      </li>
+                      <li class="c-filter__list-item">
+                        <input class="c-filter__checkbox" id="hf-5" type="checkbox">
+                        <label class="c-filter__label" for="hf-5">Hodnota filtru</label>
+                        <span class="c-filter__count">(154)</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Stav -->
+                  <div class="c-filter__item">
+                    <h3 class="c-filter__title">
+                      <a class="c-filter__link" href="#" data-toggle data-target="#toggle-stav" aria-label="Otevřít filtr stav">
+                        Stav
+                        <span class="c-icon c-icon--arrow hidden" data-icon="arrow-top"></span>
+                        <span class="c-icon c-icon--arrow" data-icon="arrow-down"></span>
+                      </a>
+                    </h3>
+                    <ul class="c-filter__list hidden" id="toggle-stav">
+                      <li class="c-filter__list-item">
+                        <input class="c-filter__checkbox" id="novinky" type="checkbox">
+                        <label class="c-filter__label" for="novinky">Novinky</label>
+                        <span class="c-filter__count">(3457)</span>
+                      </li>
+                      <li class="c-filter__list-item">
+                        <input class="c-filter__checkbox" id="skladem" type="checkbox">
+                        <label class="c-filter__label" for="skladem">Skladem</label>
+                        <span class="c-filter__count">(458)</span>
+                      </li>
+                      <li class="c-filter__list-item">
+                        <input class="c-filter__checkbox" id="stitek" type="checkbox">
+                        <label class="c-filter__label" for="stitek">Nějaký další štítek</label>
+                        <span class="c-filter__count">(876)</span>
+                      </li>
+                      <li class="c-filter__list-item">
+                        <input class="c-filter__checkbox" id="zakoupeno" type="checkbox">
+                        <label class="c-filter__label" for="zakoupeno">Již jsem zakoupil</label>
+                        <span class="c-filter__count">(457)</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Cena -->
+                  <div class="c-filter__item">
+                    <h3 class="c-filter__title">
+                      <a class="c-filter__link" href="#">
+                        Cena
+                        <span class="c-icon c-icon--arrow" data-icon="arrow-down"></span>
+                      </a>
+                    </h3>
+                  </div>
+
+                  <!-- Weight -->
+                  <div class="c-filter__item">
+                    <h3 class="c-filter__title">
+                      <a class="c-filter__link" href="#">
+                        Hmotnost
+                        <span class="c-icon c-icon--arrow" data-icon="arrow-down"></span>
+                      </a>
+                    </h3>
+                  </div>
+
+                  <!-- Foundry -->
+                  <div class="c-filter__item">
+                    <h3 class="c-filter__title">
+                      <a class="c-filter__link" href="#">
+                        Slevárna
+                        <span class="c-icon c-icon--arrow" data-icon="arrow-down"></span>
+                      </a>
+                    </h3>
+                  </div>
+
+                  <!-- Theme -->
+                  <div class="c-filter__item">
+                    <h3 class="c-filter__title">
+                      <a class="c-filter__link" href="#">
+                        Téma
+                        <span class="c-icon c-icon--arrow" data-icon="arrow-down"></span>
+                      </a>
+                    </h3>
+                  </div>
+
+                  <!-- Series -->
+                  <div class="c-filter__item">
+                    <h3 class="c-filter__title">
+                      <a class="c-filter__link" href="#">
+                        Série
+                        <span class="c-icon c-icon--arrow" data-icon="arrow-down"></span>
+                      </a>
+                    </h3>
+                  </div>
+                </div>
+
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="c-footer">
+        <div class="container mx-auto max-w-screen-xl px-5">
+
+          <div class="flex flex-col gap-5">
+            <div class="flex flex-col lg:flex-row gap-5">
+
+              <div class="c-footer__content lg:w-3/5">
+
+                <div class="c-footer__title flex flex-col sm:flex-row gap-4 sm:items-center">
+                  <h3 id="faq-title">Častokladené otázky pro</h3>
+                  <select class="c-select c-footer__select" name="" aria-labelledby="faq-title">
+                    <option>Bitcoin</option>
+                    <option>Opravdu dlouhý název položky</option>
+                  </select>
+                </div>
+
+                <!-- FAQ -->
+                <div class="c-faq">
+                  <ul class="c-faq__list">
+                    <li>
+                      <a class="c-faq__link" href="#">
+                        Je bitcoin uložen v bezpečí?
+                        <span class="c-icon c-icon--xs" data-icon="arrow-right"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-faq__link" href="#">
+                        Jak prodám nakoupený bitcoin?
+                        <span class="c-icon c-icon--xs" data-icon="arrow-right"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-faq__link" href="#">
+                        Jak můžu bitcoin vybrat do své peněženky?
+                        <span class="c-icon c-icon--xs" data-icon="arrow-right"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-faq__link" href="#">
+                        Jak dlouho trvá zpracování platby?
+                        <span class="c-icon c-icon--xs" data-icon="arrow-right"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-faq__link" href="#">
+                        Jak je to s měsíčními limity?
+                        <span class="c-icon c-icon--xs" data-icon="arrow-right"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-faq__link c-faq__link--next" href="#">
+                        Zobrazit všechny dotazy
+                        <span class="c-icon c-icon--xs" data-icon="arrow-down"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Adviser -->
+              <div class="c-footer__content lg:w-2/5">
+                <h3 class="c-footer__title">Nevíte si rady? Kontaktujte svého poradce</h3>
+                <div class="c-footer-adviser">
+                  <img class="c-footer-adviser__img" src="/src/assets/images/advisers/adviser-1.jpg" alt="Poradce Pavel Kupka">
+                  <div class="c-footer-adviser__contact">
+                    <p class="c-footer-adviser__name"><strong>Pavel Kupka</strong></p>
+                    <p><a class="c-footer-adviser__link" href="tel:+420741741741">+420 741 741 741</a></p>
+                    <p><a class="c-footer-adviser__link" href="mailto:pavel.kupka@goldengate.cz">pavel.kupka@goldengate.cz</a></p>
+                    <button class="c-button c-button--md c-button--primary c-footer-adviser__button">
+                      Odeslat dotaz poradci
+                      <span class="c-icon c-icon--xs" data-icon="arrow-right"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Apps -->
+            <div class="c-apps">
+              <p>Stáhněte si také naší aplikaci</p>
+              <a href="#" aria-label="Stáhnout aplikaci z App Store"><img src="/src/assets/images/app-store.svg" width="111px" height="33" alt="App Store"></a>
+              <a href="#" aria-label="stáhnout aplikaci z Google Play"><img src="/src/assets/images/google-play.svg" width="111px" height="33" alt="Google Play"></a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="c-copyright">
+              <p>&copy; Golden Gate | Všeobecné <a href="#">obchodní podmínky</a> | Zásady ochrany <a href="#">osobních údajů</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

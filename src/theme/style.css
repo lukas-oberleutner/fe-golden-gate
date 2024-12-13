@@ -1,0 +1,36 @@
+/* Fonts */
+@import './_fonts.css';
+
+/* CSS */
+@import './_base.css';
+@import './_components.css';
+@import './_utilities.css';
+
+/* CSS Variables */
+:root {
+  /* Font */
+  --font-family: 'Raleway';
+
+  /* Colors */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+
+  --color-txt: rgba(69, 64, 58, 1);
+  --color-txt-unavailable: rgba(164, 157, 146, 1);
+
+  --color-neutral-1: rgba(242, 241, 239, 1);
+  --color-neutral-2: rgba(249, 244, 236, 1);
+  --color-neutral-3: rgba(239, 234, 225, 1);
+  --color-neutral-4: rgba(224, 219, 206, 1);
+  --color-neutral-5: rgba(178, 171, 158, 1);
+  --color-neutral-6: rgba(213, 204, 185, 1);
+
+  --color-primary: rgba(197, 174, 95, 1);
+  --color-secondary: rgba(176, 138, 0, 1);
+  --color-tertiary: rgba(204, 51, 29, 1);
+
+  --color-info: rgb(9, 161, 175);
+  --color-success: rgba(9, 175, 105, 1);
+  --color-warning: rgb(175, 167, 9);
+  --color-error:rgba(204, 51, 29, 1);
+}
